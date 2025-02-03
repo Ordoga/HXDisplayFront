@@ -21,12 +21,14 @@ export default function LoginInputs() {
                         <input
                             type='text'
                             placeholder='Email'
+                            autoComplete='email'
                             value={credentials.email}
                             onChange={e => setCredentials({ ...credentials, email: e.target.value })}
                         />
                         <input
                             type='password'
                             placeholder='Password'
+                            autoComplete='current-password'
                             value={credentials.password}
                             onChange={e => setCredentials({ ...credentials, password: e.target.value })}
                         />
