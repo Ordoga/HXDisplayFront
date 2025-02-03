@@ -1,0 +1,35 @@
+.product-details-page {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+
+    & .details-section {
+        width: 100%;
+        height: 600px;
+
+        display: flex;
+
+        & .product-imgs {
+            flex: 1;
+            height: 100%;
+
+            background-color: rgb(255, 165, 165);
+        }
+
+        & .product-info {
+            flex: 1;
+            height: 100%;
+            background-color: rgb(152, 152, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 8px;
+            // Changes the 50-50 split
+            padding: 1rem;
+        }
+    }
+}

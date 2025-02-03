@@ -13,6 +13,7 @@ import Header from './cmps/UI/Header.tsx'
 import StorePage from './pages/StorePage.tsx'
 import AboutPage from './pages/AboutPage.tsx'
 import ContactPage from './pages/ContactPage.tsx'
+import ProductDetails from './pages/ProductDetails.tsx'
 
 function App() {
     return (
@@ -25,6 +26,8 @@ function App() {
                         <Route path='/store' element={<StorePage />} />
                         <Route path='/about' element={<AboutPage />} />
                         <Route path='/contact' element={<ContactPage />} />
+                        {/* Change to dynamic */}
+                        <Route path='/product' element={<ProductDetails />} />
                     </Route>
 
                     {/* Authenticated Routes */}
