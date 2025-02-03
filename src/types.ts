@@ -8,7 +8,11 @@ export type Product = {
     name: string
     description: string
     price: number
-    imageUrl: string
-    category: string
-    brand: string
+    productColors: Color[]
+}
+
+export type Color = {
+    id: number
+    name: string
+    hex: string
 }
