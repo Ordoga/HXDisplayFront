@@ -18,6 +18,21 @@ export async function loginAction(credentials: { password: string; email: string
     }
 }
 
+export async function signupAction(credentials: { password: string; email: string; name: string }) {
+    const userInSessionsStorage = UserService.getLoggedInUser()
+    if (userInSessionsStorage) {
+        store.dispatch({ type: SET_USER, user: userInSessionsStorage })
+        return userInSessionsStorage
+    } else {
+        const loggedInUser = await authService.signup(credentials)
+        console.log(loggedInUser)
+        if (loggedInUser) {
+            store.dispatch({ type: SET_USER, user: loggedInUser })
+            return loggedInUser
+        }
+    }
+}
+
 export async function logoutAction() {
     await authService.logout()
     store.dispatch({ type: SET_USER, user: null })
