@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useState } from 'react'
 import { loginAction, signupAction } from '../../store/actions/auth.action'
-import { Navigate, useNavigate } from 'react-router'
+import { useNavigate } from 'react-router'
 
 export default function LoginInputs() {
     const navigate = useNavigate()
